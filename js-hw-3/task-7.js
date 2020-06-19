@@ -86,7 +86,7 @@ const account = {
 
     for (const transaction of this.transactions) {
       if (transaction.id === +id) {
-        result = transaction;
+        return transaction;
       }
     }
 
@@ -142,4 +142,4 @@ console.log(account.getTransactionDetails("3"));
 
 console.log(account.getTransactionTotal(Transaction.DEPOSIT));
 
-
+console.log(account.transactions);

@@ -1,17 +1,50 @@
-const findBestEmployee = function (employees) {
-  const keys = Object.keys(employees);
-  let bestEmployee;
-  let maxTasks = 0;
+// const findBestEmployee = function (employees) {
+//   const keys = Object.keys(employees);
+//   let bestEmployee;
+//   let maxTasks = 0;
 
-  for (const key of keys) {
-    if (employees[key] > maxTasks) {
-      maxTasks = employees[key];
-      bestEmployee = key;
-    }
+//   for (const key of keys) {
+//     if (employees[key] > maxTasks) {
+//       maxTasks = employees[key];
+//       bestEmployee = key;
+//     }
+//   }
+
+//   return `${bestEmployee} : ${maxTasks}`;
+// };
+
+
+
+
+const findBestEmployee = function(employees) {
+
+  const deals = Object.keys (employees); 
+
+  let bestEmployee = 0;
+  
+for( const deal of deals){
+  
+  if (employees[deal] > bestEmployee){
+    
+    bestEmployee = employees[deal]; 
+  
+  }
+  
+}
+
+for( const deal of deals){
+
+  if (employees[deal] === bestEmployee){
+   
+   return deal;
   }
 
-  return `${bestEmployee} : ${maxTasks}`;
-};
+}
+}
+
+
+
+
 
 console.log(
   findBestEmployee({
