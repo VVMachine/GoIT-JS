@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- <link rel="stylesheet" href="css/blueimp-gallery.min.css" /> -->
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Image Finder</title>
+  </head>
+
+  <body>
+    <a class="button-up" href="#">
+      <img src="./images/up-btn.png" alt="UP" />
+    </a>
+
+    <div class="container">
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button type="submit">Go Search</button>
+      </form>
+
+      <ul class="gallery">
+        <!-- Список <li> с карточками изображений -->
+      </ul>
+
+      <button class="load-more-button" type="button" data-action="load-more">
+        Load More
+      </button>
+    </div>
+
+    <div
+      id="blueimp-gallery"
+      class="blueimp-gallery blueimp-gallery-controls blueimp-gallery-contain"
+      aria-label="image gallery"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="slides" aria-live="polite"></div>
+      <h3 class="title"></h3>
+      <a
+        class="prev"
+        aria-controls="blueimp-gallery"
+        aria-label="previous slide"
+        aria-keyshortcuts="ArrowLeft"
+      ></a>
+      <a
+        class="next"
+        aria-controls="blueimp-gallery"
+        aria-label="next slide"
+        aria-keyshortcuts="ArrowRight"
+      ></a>
+      <a
+        class="download"
+        aria-controls="blueimp-gallery"
+        aria-label="download"
+      ></a>
+      <a
+        class="close"
+        aria-controls="blueimp-gallery"
+        aria-label="close"
+        aria-keyshortcuts="Escape"
+      ></a>
+      <a
+        class="play-pause"
+        aria-controls="blueimp-gallery"
+        aria-label="play slideshow"
+        aria-keyshortcuts="Space"
+        aria-pressed="false"
+        role="button"
+      ></a>
+      <ol class="indicator"></ol>
+    </div>
+  </body>
+</html>

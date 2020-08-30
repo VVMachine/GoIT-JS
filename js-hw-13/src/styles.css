@@ -1,0 +1,140 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  /*
+   * CSS image reference example.
+   */
+  background-image: url('./images/bg-pattern.png');
+
+  overflow: scroll;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  width: 90%;
+}
+
+.gallety-item {
+  width: 320px;
+  height: 260px;
+
+  margin: 10px;
+  margin-bottom: 0px;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border: 5px solid #37bbeb6b;
+
+  background-color: #f3b26d3d;
+}
+
+.gallety-item > .gallery-link {
+  display: block;
+  width: 305px;
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.gallety-item > .gallery-link > img {
+  max-height: 90%;
+  max-width: 90%;
+  margin: 0;
+  border-radius: 30% 15% 30% 15%;
+}
+
+.gallety-item > .gallery-link:hover {
+  cursor: zoom-in;
+}
+
+.gallety-item > .stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallety-item > .stats > .stats-item {
+  display: flex;
+  margin: 0;
+  color: #230082;
+  font-size: 12px;
+
+  align-items: center;
+  margin-left: 15px;
+}
+
+.gallety-item > .stats > .stats-item > i {
+  margin-right: 5px;
+}
+
+.search-form > input {
+  height: 55px;
+  width: 315px;
+  font-size: 30px;
+}
+
+.search-form > button {
+  height: 55px;
+  font-size: 30px;
+}
+
+.button-up {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 30px;
+  display: block;
+  visibility: hidden;
+}
+
+.blueimp-gallery > .download {
+  position: absolute;
+  top: 15px;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+  background: url('./img/download.png') center no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.blueimp-gallery > .download:hover {
+  opacity: 1;
+}
+
+.load-more-button {
+  height: 50px;
+  width: 200px;
+  font-size: 28px;
+  border-radius: 5px;
+}
